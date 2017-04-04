@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Finder challenge</title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Proxima+Nova" rel="stylesheet" type="text/css">
+    <link href="/vendor/pure/pure-min.css" rel="stylesheet">
+    <link href="/vendor/awesomplete/awesomplete.css" rel="stylesheet">
+    <link href="/styles/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app pure-g">
+      <header class="pure-u-1">
+        <div class="pure-u-1-3">
+          <h1 class="logo">Finder challenge</h1>
+        </div>
+        <div class="pure-u-7-24">
+          <div class="search-form">
+            <input class="input-Buscar awesomplete" type="text" placeholder="Buscar ..." id="inputBuscar">
+            <button class="button-search" type="submit" disabled>Buscar</button>
+          </div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="search-link"><a href="javascript:;">Guardar Búsqueda</a></div>
+        </div>
+      </header>
+      <aside class="filters pure-u-1-4">
+        <h3 class="title-aside search-aside">Búsqueda guardadas</h3>
+        <ul>
+          <li class="link-search-save" id="link-terror" data="link-terror"><a href="javascript:;">terror puro</a></li>
+          <li class="link-search-save" id="link-search" data="link-search"><a href="javascript:;">search drama</a></li>
+          <li class="link-search-save" id="link-comedias" data="link-comedias"><a href="javascript:;">comedias en inglés</a></li>
+        </ul>
+        <h3 class="title-aside">Categorías</h3>
+        <ul>
+          <li><a href="javascript:;">Todos</a></li>
+          <li><a href="javascript:;">Terror</a></li>
+          <li><a href="javascript:;">Comedia</a></li>
+          <li><a href="javascript:;">Drama</a></li>
+        </ul>
+        <h3 class="title-aside">Idioma</h3>
+        <ul>
+          <li><a href="javascript:;">Todos</a></li>
+          <li><a href="javascript:;">Inglés</a></li>
+          <li><a href="javascript:;">Español</a></li>
+          <li><a href="javascript:;">Portugués</a></li>
+        </ul>
+        <h3 class="title-aside">Publicación</h3>
+        <ul>
+          <li><a href="javascript:;">Todos</a></li>
+          <li><a href="javascript:;">Hoy</a></li>
+          <li><a href="javascript:;">Hace una semana</a></li>
+          <li><a href="javascript:;">Hace un mes</a></li>
+          <li><a href="javascript:;">Hace un año</a></li>
+        </ul>
+        <h3 class="title-aside">Presentación</h3>
+        <ul>
+          <li><a href="javascript:;">Impreso</a></li>
+          <li><a href="javascript:;">Digital</a></li>
+          <li><a href="javascript:;">Impreso y Digital</a></li>
+        </ul>
+      </aside>
+      <section class="pure-u-3-4">
+        <div class="pure-u-1 content"></div>
+      </section>
+      <footer class="pure-u-1"></footer>
+      <script type="text/template" id="cardMovie">
+        <div class="card-movie wrap pure-u-7-24"><img class="image-movie" src="{{ image }}!" alt="{{ title }}!">
+          <h3>{{ title }}!</h3>
+          <p>{{ teaser }}!</p>
+        </div>
+      </script>
+    </div>
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/underscore/underscore-min.js"></script>
+    <script src="/vendor/awesomplete/awesomplete.min.js"></script>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/search-form.js"></script>
+    <script src="/scripts/app.js"></script>
+  </body>
+</html>
